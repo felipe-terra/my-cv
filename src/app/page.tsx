@@ -4,15 +4,14 @@ import { useState } from 'react';
 import Squares from './comp/Backgrounds/Squares/Squares';
 import DecryptedText from './comp/TextAnimations/DecryptedText/DecryptedText';
 import ShinyText from './comp/TextAnimations/ShinyText/ShinyText';
-import ElasticSlider from './comp/Components/ElasticSlider/ElasticSlider';
+
 import SpotlightCard from './comp/Components/SpotlightCard/SpotlightCard';
-import { HiSpeakerXMark, HiSpeakerWave } from 'react-icons/hi2';
+
 import { 
   SiJavascript, 
   SiTypescript, 
   SiReact, 
   SiNextdotjs, 
-  SiPython, 
   SiNodedotjs,
   SiTailwindcss,
   SiGit,
@@ -87,6 +86,7 @@ export default function Home() {
                       <SiTypescript size={40} className="text-blue-400" />
                       <SiReact size={40} className="text-cyan-400" />
                       <SiNodedotjs size={40} className="text-green-500" />
+                      <SiNextdotjs size={40} className="text-white" />
                       <SiTailwindcss size={40} className="text-cyan-400" />
                       <SiGit size={40} className="text-orange-500" />
                       <SiLaravel size={40} className="text-red-500" />
