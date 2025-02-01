@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Squares from './comp/Backgrounds/Squares/Squares';
 import DecryptedText from './comp/TextAnimations/DecryptedText/DecryptedText';
 import ShinyText from './comp/TextAnimations/ShinyText/ShinyText';
+import { Tooltip } from 'react-tooltip';
 
 import SpotlightCard from './comp/Components/SpotlightCard/SpotlightCard';
 
@@ -16,6 +17,7 @@ import {
   SiTailwindcss,
   SiGit,
   SiLaravel,
+  SiMysql,
 } from 'react-icons/si';
 import { DiscordInfo } from './discordInfo';
 
@@ -82,14 +84,38 @@ export default function Home() {
                   <div className="p-8 flex flex-col items-center gap-8">
                     <h2 className="text-2xl font-bold">Techs</h2>
                     <div className="flex gap-12 items-center">
-                      <SiJavascript size={40} className="text-yellow-400" />
-                      <SiTypescript size={40} className="text-blue-400" />
-                      <SiReact size={40} className="text-cyan-400" />
-                      <SiNodedotjs size={40} className="text-green-500" />
-                      <SiNextdotjs size={40} className="text-white" />
-                      <SiTailwindcss size={40} className="text-cyan-400" />
-                      <SiGit size={40} className="text-orange-500" />
-                      <SiLaravel size={40} className="text-red-500" />
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="JavaScript">
+                        <SiJavascript size={40} className="text-yellow-400" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="TypeScript">
+                        <SiTypescript size={40} className="text-blue-400" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="React">
+                        <SiReact size={40} className="text-cyan-400" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="Node.js">
+                        <SiNodedotjs size={40} className="text-green-500" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="Next.js">
+                        <SiNextdotjs size={40} className="text-white" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="Tailwind CSS">
+                        <SiTailwindcss size={40} className="text-cyan-400" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="Git">
+                        <SiGit size={40} className="text-orange-500" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="MySQL">
+                        <SiMysql size={40} className="text-green-500" />
+                      </span>
+                      <span data-tooltip-id="tech-tooltip" data-tooltip-content="Laravel">
+                        <SiLaravel size={40} className="text-red-500" />
+                      </span>
+                      <Tooltip 
+                        id="tech-tooltip" 
+                        place="top"
+                        className="!bg-zinc-800 !px-4 !py-2 !rounded-md !text-white"
+                      />
                     </div>
                   </div>
                 </SpotlightCard>
