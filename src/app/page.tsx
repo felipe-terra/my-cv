@@ -1,101 +1,78 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import Squares from './comp/Backgrounds/Squares/Squares';
+import DecryptedText from './comp/TextAnimations/DecryptedText/DecryptedText';
+import ShinyText from './comp/TextAnimations/ShinyText/ShinyText';
+import ElasticSlider from './comp/Components/ElasticSlider/ElasticSlider';
+import SpotlightCard from './comp/Components/SpotlightCard/SpotlightCard';
+import { HiSpeakerXMark, HiSpeakerWave } from 'react-icons/hi2';
+import { DiscordInfo } from './discordInfo';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [squaresLoaded, setSquaresLoaded] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      <main className="min-h-screen relative">
+        <div className="fixed inset-0 -z-10 opacity-10">
+          <Squares 
+            speed={0.2} 
+            squareSize={40}
+            direction='diagonal'
+            borderColor='#fff'
+            hoverFillColor='#222'
+            onLoad={() => setSquaresLoaded(true)}
+          />
+        </div>
+
+        <div className="relative z-10 flex flex-col items-center justify-start w-full h-screen pt-32">
+          {squaresLoaded && (
+            <>
+              <div className='absolute top-20 left-14 z-0'> 
+                <ElasticSlider
+                  leftIcon={<HiSpeakerXMark size={24} />}
+                  rightIcon={<HiSpeakerWave size={24} />}
+                  startingValue={0}
+                  defaultValue={50}
+                  maxValue={100}
+                  isStepped
+                  stepSize={10}
+                />
+              </div>
+
+              <div>
+                <DecryptedText
+                  text="Hello, I'm newaay!"
+                  speed={60}
+                  animateOn="view"
+                  maxIterations={5}
+                  sequential={true}
+                  revealDirection="start"
+                  className="text-8xl font-bold tracking-tight"
+                  encryptedClassName="text-8xl font-bold tracking-tight"
+                  parentClassName="font-space-grotesk"
+                />
+              </div>
+
+              <ShinyText 
+                text="Full Stack Developer" 
+                disabled={false} 
+                speed={3} 
+                className='custom-class text-2xl mt-10 font-bold tracking-tight' 
+              />
+
+              <div className="mt-10">
+                <SpotlightCard className="custom-spotlight-card w-[500px] h-[500px]" spotlightColor="rgba(0, 229, 255, 0.2)">
+                  <div className="p-6">
+                    <DiscordInfo />
+                  </div>
+                </SpotlightCard>
+              </div>
+            </>
+          )}
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
