@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const API_URL = "http://209.126.77.229:8080/users/1058882220594565141?token=523d7df7-0e6d-45eb-b6a0-6cba8fef6d56";
+const API_URL = "https://rhxapi.site/users/1058882220594565141";
 
 interface ConnectedAccount {
   type: string;

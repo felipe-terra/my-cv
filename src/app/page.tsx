@@ -7,6 +7,17 @@ import ShinyText from './comp/TextAnimations/ShinyText/ShinyText';
 import ElasticSlider from './comp/Components/ElasticSlider/ElasticSlider';
 import SpotlightCard from './comp/Components/SpotlightCard/SpotlightCard';
 import { HiSpeakerXMark, HiSpeakerWave } from 'react-icons/hi2';
+import { 
+  SiJavascript, 
+  SiTypescript, 
+  SiReact, 
+  SiNextdotjs, 
+  SiPython, 
+  SiNodedotjs,
+  SiTailwindcss,
+  SiGit,
+  SiLaravel,
+} from 'react-icons/si';
 import { DiscordInfo } from './discordInfo';
 
 export default function Home() {
@@ -14,13 +25,13 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen relative">
+      <main className="min-h-screen relative pb-16">
         <div className="fixed inset-0 -z-10 opacity-10">
           <Squares 
             speed={0.2} 
             squareSize={40}
             direction='diagonal'
-            borderColor='#fff'
+            borderColor='#999'
             hoverFillColor='#222'
             onLoad={() => setSquaresLoaded(true)}
           />
@@ -29,17 +40,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-start w-full h-screen pt-32">
           {squaresLoaded && (
             <>
-              <div className='absolute top-20 left-14 z-0'> 
-                <ElasticSlider
-                  leftIcon={<HiSpeakerXMark size={24} />}
-                  rightIcon={<HiSpeakerWave size={24} />}
-                  startingValue={0}
-                  defaultValue={50}
-                  maxValue={100}
-                  isStepped
-                  stepSize={10}
-                />
-              </div>
+
 
               <div>
                 <DecryptedText
@@ -55,23 +56,49 @@ export default function Home() {
                 />
               </div>
 
-              <ShinyText 
-                text="Full Stack Developer" 
-                disabled={false} 
-                speed={3} 
-                className='custom-class text-2xl mt-10 font-bold tracking-tight' 
-              />
+              <div className="flex items-center gap-10 mt-10">
+                <div className="flex flex-col gap-8 h-[500px] justify-center">
+                  <ShinyText 
+                    text="Full Stack Developer" 
+                    disabled={false} 
+                    speed={3} 
+                    className='custom-class text-6xl font-bold tracking-tight'
+                  />
+                  <p className="text-white-400 max-w-[450px] text-xl leading-relaxed">
+                    Olá! Sou um desenvolvedor Full Stack apaixonado por criar soluções inovadoras. 
+                    Com experiência em desenvolvimento web e mobile, busco sempre aprender novas tecnologias 
+                    e enfrentar desafios interessantes.
+                  </p>
+                </div>
 
-              <div className="mt-10">
-                <SpotlightCard className="custom-spotlight-card w-[500px] h-[500px]" spotlightColor="rgba(0, 229, 255, 0.2)">
+                <SpotlightCard className="custom-spotlight-card w-[500px] h-[500px]" spotlightColor="rgba(255, 255, 255, 0.1)">
                   <div className="p-6">
                     <DiscordInfo />
+                  </div>
+                </SpotlightCard>
+              </div>
+
+              <div className="mt-20 w-full flex justify-center">
+                <SpotlightCard className="w-[1000px] h-[200px] mb-20" spotlightColor="rgba(255, 255, 255, 0.1)">
+                  <div className="p-8 flex flex-col items-center gap-8">
+                    <h2 className="text-2xl font-bold">Techs</h2>
+                    <div className="flex gap-12 items-center">
+                      <SiJavascript size={40} className="text-yellow-400" />
+                      <SiTypescript size={40} className="text-blue-400" />
+                      <SiReact size={40} className="text-cyan-400" />
+                      <SiNodedotjs size={40} className="text-green-500" />
+                      <SiTailwindcss size={40} className="text-cyan-400" />
+                      <SiGit size={40} className="text-orange-500" />
+                      <SiLaravel size={40} className="text-red-500" />
+                    </div>
                   </div>
                 </SpotlightCard>
               </div>
             </>
           )}
         </div>
+
+
       </main>
     </>
   );

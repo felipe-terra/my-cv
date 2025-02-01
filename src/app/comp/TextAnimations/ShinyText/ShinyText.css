@@ -1,15 +1,9 @@
-/*
-	jsrepo 1.29.1
-	Installed from https://reactbits.dev/default/
-	30-01-2025
-*/
-
 .shiny-text {
-  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  color: #f7f7f7de; /* Adjust this color to change intensity/style */
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.9) 50%,
     rgba(255, 255, 255, 0) 60%
   );
   background-size: 200% 100%;
