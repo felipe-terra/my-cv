@@ -78,8 +78,8 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-3">
                     <MdEmail size={24} className="text-white" />
-                    <a href="mailto:your.email@example.com" className="text-white hover:text-blue-400 transition-colors">
-                      your.email@example.com
+                    <a href="mailto:newaay.sapequices@outlook.com" className="text-white hover:text-blue-400 transition-colors">
+                      newaay.sapequices@outlook.com
                     </a>
                   </div>
                 </div>
