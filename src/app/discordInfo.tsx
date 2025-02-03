@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const API_URL = "https://rhxapi.site/users/1058882220594565141";
 
@@ -72,7 +73,13 @@ export function DiscordInfo() {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center gap-3">
-        <img src="/loading.svg" alt="Loading..." className="w-12 h-12 animate-spin" />
+        <Image 
+          src="/loading.svg" 
+          alt="Loading..." 
+          width={48}
+          height={48}
+          className="animate-spin"
+        />
         <p className="text-white/70 text-sm">Carregando informações...</p>
       </div>
     );
@@ -87,77 +94,85 @@ export function DiscordInfo() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex flex-col items-center justify-center h-full gap-6">
       {/* Avatar info */}
-      <div className="relative w-36 h-36">
-        {userData.profile?.avatarUrl && (
-          <img
-            src={userData.profile.avatarUrl}
-            alt={`Avatar de ${userData.user.username}`}
-            className="w-full h-full rounded-full object-cover border-2 border-white/10 hover:border-white/30 transition-colors z-10"
-          />
-        )}
-        {userData.profile?.avatar_decoration && (
-          <img
-            src={userData.profile.avatar_decoration.url}
-            alt="Avatar decoration"
-            className="absolute inset-0 w-full h-full z-20 pointer-events-none"
-          />
-        )}
+      <div className="relative w-32 h-32">
+        <Image
+          src={userData.profile.avatarUrl}
+          alt={`${userData.user.username}'s avatar`}
+          width={128}
+          height={128}
+          priority
+          className="rounded-full border-2 border-white/10 hover:border-white/30 transition-all duration-300"
+        />
       </div>
+
       {/* Username and tag info */}
-      <div className="flex flex-col items-center gap-4">
-        <p className="text-2xl text-white font-medium text-center">
+      <div className="flex flex-col items-center gap-1">
+        <h3 className="text-2xl text-white font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           {userData.user.username}
-        </p>
-        <p className="text-sm text-gray-400 text-center">
+        </h3>
+        <p className="text-sm text-gray-400">
           @{userData.user.tag}
         </p>
+      </div>
 
-        {/* Social Media Links */}
-        <div className="flex flex-col items-center gap-2 mt-12">
-          <p className="text-sm text-gray-400 font-medium">Socials</p>
-          <div className="flex gap-2">
-            <a
-              href="https://twitter.com/felpsc4kkj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              <img
-                src="/icons/twitter.svg"
-                alt="Twitter icon"
-                className="w-4 h-4"
-              />
-              <span className="text-sm text-white">@felpsc4kkj</span>
-            </a>
-            <a
-              href="https://github.com/felipe-terra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              <img
-                src="/icons/github.svg"
-                alt="GitHub icon"
-                className="w-4 h-4"
-              />
-              <span className="text-sm text-white">felipe-terra</span>
-            </a>
-            <a
-              href="https://open.spotify.com/user/dufyar993u3419u417xch910a"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              <img
-                src="/icons/spotify.svg"
-                alt="Spotify icon"
-                className="w-4 h-4"
-              />
-              <span className="text-sm text-white">music :D</span>
-            </a>
-          </div>
+      {/* About Me section if available */}
+      {userData.profile.aboutMe && (
+        <p className="text-sm text-gray-300 text-center max-w-[300px] italic">
+          &quot;{userData.profile.aboutMe}&quot;
+        </p>
+      )}
+
+      {/* Social Media Links */}
+      <div className="flex flex-col items-center gap-3">
+        <h4 className="text-sm text-gray-400 font-medium uppercase tracking-wider">Connect with me</h4>
+        <div className="flex gap-2">
+          <a
+            href="https://twitter.com/felpsc4kkj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-[#1DA1F2]/10 hover:scale-105 transition-all duration-300"
+          >
+            <Image
+              src="/icons/twitter.svg"
+              alt="Twitter icon"
+              width={20}
+              height={20}
+              className="opacity-80"
+            />
+            <span className="text-sm text-white/90">@felpsc4kkj</span>
+          </a>
+          <a
+            href="https://github.com/felipe-terra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-[#333]/20 hover:scale-105 transition-all duration-300"
+          >
+            <Image
+              src="/icons/github.svg"
+              alt="GitHub icon"
+              width={20}
+              height={20}
+              className="opacity-80"
+            />
+            <span className="text-sm text-white/90">felipe-terra</span>
+          </a>
+          <a
+            href="https://open.spotify.com/user/dufyar993u3419u417xch910a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-[#1DB954]/10 hover:scale-105 transition-all duration-300"
+          >
+            <Image
+              src="/icons/spotify.svg"
+              alt="Spotify icon"
+              width={20}
+              height={20}
+              className="opacity-80"
+            />
+            <span className="text-sm text-white/90">music :D</span>
+          </a>
         </div>
       </div>
     </div>

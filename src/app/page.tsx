@@ -51,7 +51,7 @@ export default function Home() {
 
               <div>
                 <DecryptedText
-                  text="Hello, I'm newaay!"
+                  text="Hello, I&apos;m newaay!"
                   speed={60}
                   animateOn="view"
                   maxIterations={5}
@@ -72,8 +72,8 @@ export default function Home() {
                     className='custom-class text-6xl font-bold tracking-tight'
                   />
                   <p className="text-white-400 max-w-[450px] text-xl text-white leading-relaxed">
-                    Hello! I'm a passionate Full Stack Developer dedicated to creating innovative solutions.
-                    With experience in web and mobile development, I'm always eager to learn new technologies
+                    Hello! I&apos;m a passionate Full Stack Developer dedicated to creating innovative solutions.
+                    With experience in web and mobile development, I&apos;m always eager to learn new technologies
                     and take on interesting challenges.
                   </p>
                   <div className="flex items-center gap-3">
@@ -130,7 +130,7 @@ export default function Home() {
 
               {/* Projects Section */}
               <div className="mt-20 mb-20 w-full flex flex-col items-center">
-                <h2 className="text-4xl text-white font-bold mb-12">Projetos</h2>
+                <h2 className="text-4xl text-white font-bold mb-12">Projects</h2>
                 <div className="grid grid-cols-2 gap-8 w-[1000px]">
                   <SpotlightCard className="h-[300px] group" spotlightColor="rgba(255, 255, 255, 0.05)">
                     <div className="p-6 h-full flex flex-col">
@@ -146,8 +146,8 @@ export default function Home() {
 
                   <SpotlightCard className="h-[300px] group" spotlightColor="rgba(255, 255, 255, 0.05)">
                     <div className="p-6 h-full flex flex-col">
-                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-green-400">Projeto 2</h3>
-                      <p className="text-white/80 flex-grow">Desc</p>
+                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-green-400">MyBio</h3>
+                      <p className="text-white/80 flex-grow">Not finished yet, but it&apos;s close!</p>
                       <div className="flex gap-3 mt-4">
                         <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Node.js</span>
                         <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Laravel</span>
