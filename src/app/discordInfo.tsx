@@ -132,46 +132,46 @@ export function DiscordInfo() {
             href="https://twitter.com/felpsc4kkj"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-[#1DA1F2]/10 hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-1 px-2 py-1 text-xs bg-white/5 rounded-lg hover:bg-[#1DA1F2]/10 hover:scale-105 transition-all duration-300 md:gap-2 md:px-3 md:py-2 md:text-sm"
           >
             <Image
               src="/icons/twitter.svg"
               alt="Twitter icon"
-              width={20}
-              height={20}
-              className="opacity-80"
+              width={16}
+              height={16}
+              className="opacity-80 w-3 h-3 md:w-5 md:h-5"
             />
-            <span className="text-sm text-white/90">@felpsc4kkj</span>
+            <span className="truncate max-w-[80px]">@felpsc4kkj</span>
           </a>
           <a
             href="https://github.com/felipe-terra"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-[#333]/20 hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-1 px-2 py-1 text-xs bg-white/5 rounded-lg hover:bg-[#333]/20 hover:scale-105 transition-all duration-300 md:gap-2 md:px-3 md:py-2 md:text-sm"
           >
             <Image
               src="/icons/github.svg"
               alt="GitHub icon"
-              width={20}
-              height={20}
-              className="opacity-80"
+              width={16}
+              height={16}
+              className="opacity-80 w-3 h-3 md:w-5 md:h-5"
             />
-            <span className="text-sm text-white/90">felipe-terra</span>
+            <span className="truncate max-w-[80px]">felipe-terra</span>
           </a>
           <a
             href="https://open.spotify.com/user/dufyar993u3419u417xch910a"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-lg hover:bg-[#1DB954]/10 hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-1 px-2 py-1 text-xs bg-white/5 rounded-lg hover:bg-[#1DB954]/10 hover:scale-105 transition-all duration-300 md:gap-2 md:px-3 md:py-2 md:text-sm"
           >
             <Image
               src="/icons/spotify.svg"
               alt="Spotify icon"
-              width={20}
-              height={20}
-              className="opacity-80"
+              width={16}
+              height={16}
+              className="opacity-80 w-3 h-3 md:w-5 md:h-5"
             />
-            <span className="text-sm text-white/90">music :D</span>
+            <span className="truncate max-w-[80px]">music :D</span>
           </a>
         </div>
       </div>
