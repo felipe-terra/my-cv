@@ -19,8 +19,41 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Felipe's Portfolio",
-  description: "Personal portfolio website",
+  title: "Felipe Terra | Full Stack Developer",
+  description: "Personal portfolio of Felipe Terra - A passionate Full Stack Developer creating innovative web solutions",
+  openGraph: {
+    title: "Felipe Terra - Full Stack Developer",
+    description: "Explore the portfolio of Felipe Terra, a skilled Full Stack Developer specializing in modern web technologies",
+    url: "https://felipeterra.dev",
+    siteName: "Felipe Terra Portfolio",
+    images: [
+      {
+        url: "/og-image.png", 
+        width: 1200,
+        height: 630,
+        alt: "Felipe Terra - Full Stack Developer Portfolio"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Felipe Terra | Full Stack Developer",
+    description: "Innovative web solutions by a passionate Full Stack Developer",
+    images: ["/og-image.png"]
+  },
+  keywords: [
+    "Felipe Terra",
+    "Full Stack Developer",
+    "Web Development",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Portfolio"
+  ],
+  creator: "Felipe Terra",
+  publisher: "Felipe Terra"
 };
 
 export default function RootLayout({
