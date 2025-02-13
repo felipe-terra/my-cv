@@ -19,7 +19,7 @@ Este é meu currículo online, desenvolvido com tecnologias modernas para aprese
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/my-cv.git
+git clone https://github.com/felipe-terra/my-cv.git
 cd my-cv
 ```
 
