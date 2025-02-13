@@ -162,6 +162,15 @@ export default function Home() {
                       </div>
                     </div>
                   </SpotlightCard>
+                  <SpotlightCard className="h-[300px] group" spotlightColor="rgba(255, 255, 255, 0.05)">
+                    <div className="p-6 h-full flex flex-col">
+                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-red-400">Cafezinho APP</h3>
+                      <p className="text-white/80 text-sm flex-grow">Um aplicativo de relacionamentos entre pessoas que moram foram do Brasil! Atuei como estagiário de desenvolvimento, trabalhei principalmente com o desenvolvimento de APIs, criando soluções como uma nova lógica de registro de contas, criação de novos planos vips e refatoração da api V1 para a V2</p>
+                      <div className="flex gap-3 mt-4">
+                      <span className="px-3 py-1 bg-blue-500/20 text-red-400 rounded-full text-sm">Laravel</span>
+                      </div>
+                    </div>
+                  </SpotlightCard>
                 </div>
               </div>
 
