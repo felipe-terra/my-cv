@@ -129,7 +129,7 @@ export function DiscordInfo() {
         <h4 className="text-sm text-gray-400 font-medium uppercase tracking-wider">Connect with me</h4>
         <div className="flex gap-2">
           <a
-            href="https://twitter.com/felpsc4kkj"
+            href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 px-2 py-1 text-xs bg-white/5 rounded-lg hover:bg-[#1DA1F2]/10 hover:scale-105 transition-all duration-300 md:gap-2 md:px-3 md:py-2 md:text-sm"
@@ -141,7 +141,7 @@ export function DiscordInfo() {
               height={16}
               className="opacity-80 w-3 h-3 md:w-5 md:h-5"
             />
-            <span className="truncate max-w-[80px]">@felpsc4kkj</span>
+            <span className="truncate max-w-[80px]">Twitter</span>
           </a>
           <a
             href="https://github.com/felipe-terra"
@@ -159,7 +159,7 @@ export function DiscordInfo() {
             <span className="truncate max-w-[80px]">felipe-terra</span>
           </a>
           <a
-            href="https://open.spotify.com/user/dufyar993u3419u417xch910a"
+            href="https://open.spotify.com/user/49"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 px-2 py-1 text-xs bg-white/5 rounded-lg hover:bg-[#1DB954]/10 hover:scale-105 transition-all duration-300 md:gap-2 md:px-3 md:py-2 md:text-sm"

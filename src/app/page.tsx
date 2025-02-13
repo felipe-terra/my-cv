@@ -51,7 +51,7 @@ export default function Home() {
 
               <div>
                 <DecryptedText
-                  text="Hello, I&apos;m newaay!"
+                  text="Hello, I&apos;m Felipe!"
                   speed={60}
                   animateOn="view"
                   maxIterations={5}
@@ -72,14 +72,14 @@ export default function Home() {
                     className='custom-class text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-center lg:text-left'
                   />
                   <p className="text-white-400 max-w-[450px] text-lg lg:text-xl text-white leading-relaxed">
-                    Hello! I&apos;m a passionate Full Stack Developer dedicated to creating innovative solutions.
+                    Hello! I&apos;m Felipe, a 20 years old passionate Full Stack Developer dedicated to creating innovative solutions.
                     With experience in web and mobile development, I&apos;m always eager to learn new technologies
                     and take on interesting challenges.
                   </p>
                   <div className="flex items-center gap-3">
                     <MdEmail size={24} className="text-white" />
-                    <a href="mailto:newaay.sapequices@outlook.com" className="text-white hover:text-blue-400 transition-colors text-sm lg:text-base break-all">
-                      newaay.sapequices@outlook.com
+                    <a href="mailto:felipeterra08@gmail.com" className="text-white hover:text-blue-400 transition-colors text-sm lg:text-base break-all">
+                      felipeterra08@gmail.com
                     </a>
                   </div>
                 </div>
@@ -130,12 +130,12 @@ export default function Home() {
 
               {/* Projects Section */}
               <div className="mt-20 mb-20 w-full flex flex-col items-center px-4 lg:px-0">
-                <h2 className="text-3xl lg:text-4xl text-white font-bold mb-12">Projects</h2>
+                <h2 className="text-3xl lg:text-4xl text-white font-bold mb-12">Projetos</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full lg:w-[1000px]">
                   <SpotlightCard className="h-[300px] group" spotlightColor="rgba(255, 255, 255, 0.05)">
                     <div className="p-6 h-full flex flex-col">
-                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-blue-400">My CV</h3>
-                      <p className="text-white/80 flex-grow">An interactive resume built with Next.js and React, featuring smooth animations and modern design.</p>
+                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-blue-400">Meu CV</h3>
+                      <p className="text-white/80 flex-grow">Um currículo interativo construído com Next.js e React, com animações suaves e design moderno.</p>
                       <div className="flex gap-3 mt-4">
                         <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Next.js</span>
                         <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">React</span>
@@ -146,12 +146,19 @@ export default function Home() {
 
                   <SpotlightCard className="h-[300px] group" spotlightColor="rgba(255, 255, 255, 0.05)">
                     <div className="p-6 h-full flex flex-col">
-                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-green-400">MyBio</h3>
-                      <p className="text-white/80 flex-grow">Not finished yet, but it&apos;s close!</p>
+                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-green-400">MeuBio</h3>
+                      <p className="text-white/80 flex-grow">Ainda não terminado, mas está perto!</p>
                       <div className="flex gap-3 mt-4">
                         <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Node.js</span>
-                        <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Laravel</span>
-                        <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">MySQL</span>
+                      </div>
+                    </div>
+                  </SpotlightCard>
+                  <SpotlightCard className="h-[300px] group" spotlightColor="rgba(255, 255, 255, 0.05)">
+                    <div className="p-6 h-full flex flex-col">
+                      <h3 className="text-2xl text-white font-bold mb-4 transition-colors duration-300 group-hover:text-red-400">FlameMC Stats</h3>
+                      <p className="text-white/80 flex-grow">Um bot que puxa as informações do jogador no FlameMC e exibe em um canal do discord onde o usuário executou o comando</p>
+                      <div className="flex gap-3 mt-4">
+                        <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Node.js</span>
                       </div>
                     </div>
                   </SpotlightCard>
@@ -161,7 +168,7 @@ export default function Home() {
               {/* Footer at the bottom */}
               <footer className="w-full py-4 border-t border-white/10 bg-[#0F0404]">
                 <div className="text-center text-white/60 text-sm">
-                  {new Date().getFullYear()} All rights reserved.
+                  {new Date().getFullYear()} Todos os direitos reservados.
                 </div>
               </footer>
               <Tooltip id="tech-tooltip" />
